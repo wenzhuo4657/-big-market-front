@@ -6,7 +6,7 @@ const apiHostUrl=process.env.API_HOST_URL;
  */
 export const queryRaffleAwardList = (strategyId: number) => {
     try {
-        return fetch(`${apiHostUrl}/api/v1/raffle/query_raffle_award_list?strategyId=${strategyId}`, {
+        return fetch(`${apiHostUrl}/api/v1/raffle/query_raffle_award_list?strategyId=${strategyId}&apipost_id=1064c113f59006`, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -38,7 +38,7 @@ export const queryRaffleAwardList = (strategyId: number) => {
  */
 export const randomRaffle = (strategyId?: number) => {
     try {
-        return fetch(`${apiHostUrl}/api/v1/raffle/random_raffle?strategyId=${strategyId}`, {
+        return fetch(`${apiHostUrl}/api/v1/raffle/random_raffle?strategyId=${strategyId}&apipost_id=1117a881759001`, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
