@@ -109,6 +109,7 @@ export function LuckyGridPage() {
     const [defaultStyle] = useState([{background: "#b8c5f2"}])
 
     useEffect(() => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         queryRaffleAwardListHandle().then(r => {
         });
     }, [])
@@ -139,6 +140,7 @@ export function LuckyGridPage() {
                 // @ts-ignore
                 prize => {
                     // 加载数据
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     queryRaffleAwardListHandle().then(r => {
                     });
                     // 展示奖品

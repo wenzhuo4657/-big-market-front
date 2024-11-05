@@ -11,4 +11,4 @@ fi
 # 重新生成
 cd /var/jenkins_home/workspace/hwz-bigMarketFront/big-market
 docker build -t  jacka7732/big-market-front-app:1.0 .
-docker run -itd -p 3000:3000 --name xfg-dev-tech-app jacka7732/big-market-front-app:1.0
+docker run -itd -p 3000:3000 -p 8091:8091 --name xfg-dev-tech-app jacka7732/big-market-front-app:1.0
