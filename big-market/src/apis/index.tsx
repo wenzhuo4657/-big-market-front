@@ -30,7 +30,6 @@ export const queryRaffleAwardList = (userId?: string, activityId?: number) => {
                 activityId: activityId
             })
         });
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
         return fetch("{\n" +
             "    \"code\": \"0001\",\n" +
@@ -58,7 +57,6 @@ export const draw = (userId?: string, activityId?: number) => {
             })
         })
 
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
         return fetch("{\n" +
             "    \"code\": \"0001\",\n" +

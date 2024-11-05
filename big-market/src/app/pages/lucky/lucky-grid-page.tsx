@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useState, useRef, useEffect} from 'react'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
 // @ts-expect-error
 import {LuckyGrid} from '@lucky-canvas/react'
 import {draw, queryRaffleAwardList} from "@/apis";
@@ -110,7 +110,7 @@ export function LuckyGridPage() {
     const [defaultStyle] = useState([{background: "#b8c5f2"}])
 
     useEffect(() => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
         queryRaffleAwardListHandle().then(r => {
         });
     }, [])
@@ -126,13 +126,12 @@ export function LuckyGridPage() {
             defaultStyle={defaultStyle}
             buttons={buttons}
             onStart={() => { // 点击抽奖按钮会触发star回调
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
                 // @ts-expect-error
                 myLucky.current.play()
                 setTimeout(() => {
                     // 抽奖接口
                     randomRaffleHandle().then(prizeIndex => {
-                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-expect-error
                             myLucky.current.stop(prizeIndex);
                         }
@@ -140,11 +139,11 @@ export function LuckyGridPage() {
                 }, 2500)
             }}
             onEnd={
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
                 // @ts-expect-error
                 prize => {
                     // 加载数据
-                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
                     queryRaffleAwardListHandle().then(r => {
                     });
                     // 展示奖品

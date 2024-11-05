@@ -1,7 +1,6 @@
 "use client"
 
 import React, {useEffect, useRef, useState} from 'react'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import {LuckyWheel} from '@lucky-canvas/react'
 
@@ -67,7 +66,7 @@ export function LuckyWheelPage() {
     }
 
     useEffect(() => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
         queryRaffleAwardListHandle().then(r => {
         });
     }, [])
@@ -81,13 +80,13 @@ export function LuckyWheelPage() {
             prizes={prizes}
             buttons={buttons}
             onStart={() => {
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
                 // @ts-expect-error
                 myLucky.current.play()
                 setTimeout(() => {
                     // 抽奖接口
                     randomRaffleHandle().then(prizeIndex => {
-                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
                             // @ts-expect-error
                             myLucky.current.stop(prizeIndex);
                         }
@@ -96,7 +95,7 @@ export function LuckyWheelPage() {
                 }, 2500)
             }}
             onEnd={
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
                 // @ts-expect-error
                 prize => {
                     alert('恭喜你抽到【' + prize.fonts[0].text + '】奖品ID【' + prize.fonts[0].id + '】')
