@@ -1,7 +1,8 @@
 "use client"
 
 import React, {useState, useRef, useEffect} from 'react'
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {LuckyGrid} from '@lucky-canvas/react'
 import {draw, queryRaffleAwardList} from "@/apis";
 
@@ -125,19 +126,22 @@ export function LuckyGridPage() {
             defaultStyle={defaultStyle}
             buttons={buttons}
             onStart={() => { // 点击抽奖按钮会触发star回调
-                // @ts-ignore
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
                 myLucky.current.play()
                 setTimeout(() => {
                     // 抽奖接口
                     randomRaffleHandle().then(prizeIndex => {
-                            // @ts-ignore
+                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-expect-error
                             myLucky.current.stop(prizeIndex);
                         }
                     );
                 }, 2500)
             }}
             onEnd={
-                // @ts-ignore
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
                 prize => {
                     // 加载数据
                     // eslint-disable-next-line @typescript-eslint/no-unused-vars
