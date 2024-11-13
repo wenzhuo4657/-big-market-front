@@ -1,1 +1,1 @@
-docker build -t  jacka7732/big-market-front-app:1.0 .
+docker build -t  jacka7732/big-market-front-app:2.0 .
